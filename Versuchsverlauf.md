@@ -26,7 +26,7 @@ Aufnahme von Messdaten:
 	- Kanal 3: innerer 1kΩ
 - Aufgabe 1.1: Widerstand am von Kanal 2 bestimmen
 - Aufgabe 1.2: Temperaturkalibrierung des PT-1000
-- Aufgabe 1.3: Abkühlkurve (Mittagszeit)
+- Aufgabe 1.3: Abkühlkurve (Mittagspause)
 	- ca. 1h Daten aufnehmen
 	
 Heizregelungen:
@@ -58,8 +58,8 @@ Einführung:
 - in LabView beides nachbauen lassen
 	- output: Programmende --> output=0
 		- habe mir gestern die Finger verbrannt
-		
 	- input: erst ohne, dann mit Mittelwert
+	
 - Thermometer einbauen:
 	- Faktor schätzen lassen, dann Faktor implimentieren
 Aufgaben:
