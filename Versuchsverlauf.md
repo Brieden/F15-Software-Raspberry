@@ -1,23 +1,19 @@
 ## Vorgespräch:
-Stromkreislauf:
-- Widerstand/Strom Messen
-- Leistung
-
-Temperaturabhängige Widerstände:
-- nahezu linearen Zusammenhang des Widerstandes mit der Temperatur
-- Heißleiter oder Kaltleiter?
-	- wie Temperatur messen?  Konstantstromquelle + Spannungsmessgerät 
-	
-Programmierstruktur:
-- if
-- for
-- while
-
-Datentypen:
-- integer, bool, float
-
-Reglungen:
-- Zweipunkt-, Proportional-, Integralreglung
+- Stromkreislauf:
+	- Widerstand/Strom Messen
+	- Leistung
+- Temperaturabhängige Widerstände:
+	- nahezu linearen Zusammenhang des Widerstandes mit der Temperatur
+	- Heißleiter oder Kaltleiter?
+		- wie Temperatur messen?  Konstantstromquelle + Spannungsmessgerät 
+- Programmierstruktur:
+	- if
+	- for
+	- while
+- Datentypen:
+	- integer, bool, float
+- Reglungen:
+	- Zweipunkt-, Proportional-, Integralreglung
     
 ## Raspberry Pi:
 Aufnahme von Messdaten:
