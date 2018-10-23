@@ -2,16 +2,20 @@
 Stromkreislauf:
 - Widerstand/Strom Messen
 - Leistung
+
 Temperaturabhängige Widerstände:
 - nahezu linearen Zusammenhang des Widerstandes mit der Temperatur
 - Heißleiter oder Kaltleiter?
 	- wie Temperatur messen?  Konstantstromquelle + Spannungsmessgerät 
+	
 Programmierstruktur:
 - if
 - for
 - while
+
 Datentypen:
 - integer, bool, float
+
 Reglungen:
 - Zweipunkt-, Proportional-, Integralreglung
     
@@ -24,9 +28,11 @@ Aufnahme von Messdaten:
 - Aufgabe 1.2: Temperaturkalibrierung des PT-1000
 - Aufgabe 1.3: Abkühlkurve (Mittagszeit)
 	- ca. 1h Daten aufnehmen
+	
 Heizregelungen:
 - zeige: manueller Lampentest
 		- 4,999999 V ist höchste Leistung
+		
 - Aufgaben:
 	- Regelparameter variieren
 	- Konstanten in output schreiben    
@@ -43,17 +49,19 @@ CC vs CV: Constant Current/Constant Voltage
 
 ## LabView:
 Einführung:
-	- erst in NI MAX: 
-		- output: Ansteuerung des Netzteils: Halogenlampe, Faktor
-		- input: Frequenzgenerator: 
-			- 5 x 0,2Hz sieht gut aus, 
-			- 5 x 2Hz ist langsamer, unstabil beim Wackeln des NI Fensters: Sampling Problem, Moiré-Effekt:
-	- in LabView beides nachbauen lassen
-		- output: Programmende --> output=0
-			- habe mir gestern die Finger verbrannt
-		- input: erst ohne, dann mit Mittelwert
-	- Thermometer einbauen:
-		- Faktor schätzen lassen, dann Faktor implimentieren
+- erst in NI MAX: 
+	- output: Ansteuerung des Netzteils: Halogenlampe, Faktor
+	- input: Frequenzgenerator: 
+		- 5 x 0,2Hz sieht gut aus, 
+		- 5 x 2Hz ist langsamer, unstabil beim Wackeln des NI Fensters: Sampling Problem, Moiré-Effekt
+		
+- in LabView beides nachbauen lassen
+	- output: Programmende --> output=0
+		- habe mir gestern die Finger verbrannt
+		
+	- input: erst ohne, dann mit Mittelwert
+- Thermometer einbauen:
+	- Faktor schätzen lassen, dann Faktor implimentieren
 Aufgaben:
     - Aufgabe 3.1: Heizrampe 
     - Aufgabe 3.2: Zweipunkt-Regelung,
