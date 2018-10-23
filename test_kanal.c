@@ -11,7 +11,7 @@
  * 
  * * * time_ms()
  * Gibt aktuelle Laufzeit des Programms in ms zurück
- * output:  int
+ * output: int
  * 
  * * * wait_ms(time)
  * Lässt das Programm pausieren
@@ -33,7 +33,7 @@
  * * * temp_sensor2(resistance)
  * Berechnet die Temperatur in C° für den Temperatursensor 2
  * input: float resistance: der aktuelle Widerstand
- * output: float: Temperatur
+ * output: float
  */
 
 int  main()
