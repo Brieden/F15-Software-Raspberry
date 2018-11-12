@@ -205,14 +205,14 @@ Pump ON - Pump OFF
 Turn left - Turn right
 High speed - Low speed
 
-## Proportionalregelung (P-Regler)
-Die eben diskutierten unstetigen Regler haben den Vorteil ihrer Einfachheit. Allerdings haben unstetige Regler in der realen technischen Umsetzung auch eine Reihe von Nachteilen. Man stelle sich einen Automotor vor, dessen Drehzahl unstetig geregelt wird. Es gäbe dann nichts zwischen Leerlauf und Vollgas. Für derartige Anwendungen verwendet man daher stetige Regler. Hierbei ist die Reglerausgangsgröße proportional zur Regeldifferenz. Der Proportionalregler ist ein proportional wirkender Regler. Das heißt die Regelabweichung und die Stellgröße stehen in einem bestimmten Verhältnis. Dieses Verhältnis wird durch den Verstärkungsfaktor Kp festgelegt. Ein Beispiel:
-Ein Lüfter einers Computers soll zur Kühlung der CPU geregelt werden. Der Motor des Lüftres soll sich einschalten, wenn die Temperatur um einen bestimmten Wert steigt. Ab einer Regelabweichung von 5°C soll die Motorleistung 20% betragen, bei 10°C 40%. Als Verstärkungsfaktor muss dann Kp = 4 eingestellt werden.
+## Proportional control (P-controller)
+The discontinuous controllers just discussed have the advantage of their simplicity. However, discontinuous controllers in the real technical implementation also have a number of disadvantages. Imagine a car engine whose speed is discontinuously regulated. There would be nothing between idle and full throttle. Therefore, continuous controllers are used for such applications. The controller output is proportional to the control difference. The proportional controller is a proportional controller. This means that the control deviation and the manipulated variable are in a certain ratio. This ratio is determined by the gain Kp. An example:
+A fan of a computer should be controlled to cool the CPU. The engine of the fan should turn on when the temperature rises by a certain amount. From a control deviation of 5°C the engine power should be 20%, at 10°C 40%. Then the gain factor must be set to Kp = 4.
 
-## Integralregelung
-Um die Regelung weiter zu verbessern, fügt man ggf. einen I-Anteil hinzu. Das „I“ steht für Integral. Der Integral-Anteil einer Reglung berücksichtigt nicht den “Fehler” selbst, sondern den über der Zeit aufsummierten (integrierten) Fehler. Damit führt selbst ein kleiner Fehler irgendwann zu einer Reaktion des Reglers. Das bedeutet für die Umsetzung, jedes Mal wenn der aktuelle Fehler ermittelt wird, wird er zu der Variablen (hier integral genannt) hinzuaddiert: integralteil = integralteil + fehler
-Am Ende wird - wie bei dem P-Anteil - der integrale Wert mit einer Konstanten multipliziert. Der I - Regler korrigiert Fehler, die sich in der VERGANGENHEIT aufsummiert haben.
+## Integral control
+To further improve the regulation, you may add an I component. The "I" stands for integral. The integral part of a regulation does not take account of the "error" itself, but of the (integrated) error accumulated over time. Thus, even a small error eventually leads to a reaction of the controller. This means for the implementation, every time the current error is detected, it is added to the variable (here called integral): integral part = integral part + error
+At the end, as with the P component, the integral value is multiplied by a constant. The I-controller corrects errors that have accumulated in the PAST.
 
-# Multifunktions-I/O-Gerät alias DaQ-Pad
-Zur Datenerfassung und Generierung von Steuersignalen wird ein Data Acqusition Modul benutzt. Es ist per USB an den PC angeschlossene und wird mit LabVIEW programmiert. Es stellt eine direkte Schnittstelle zum Messen und Stellen von Analog‑ und Digitalsignal am PC dar. Es erlaubt Livemessung von nahezu beliebiger Messsignale. Dabei werden analoge Spannungssignale als Eingang von ± 10 V erwartet. Dieses Signal kann in einer Rate von 10 kHz und einer Auflösung von 14 Bit (d.h. ca. 0,6 mV) gemessen werden.
-Die Analoge Ausgänge werden in diesem Versuch Ansteuerung weiterer Geräte genutzt.
+# Multifunction I/O device alias DaQ-Pad
+For data acquisition and generation of control signals a Data Acqusition module is used. It is connected to the PC via USB and is programmed with LabVIEW. It provides a direct interface for measuring and setting analogue and digital signals on the PC. It allows live measurement of almost any measuring signals. Analog voltage signals are expected as input of ± 10V. This signal can be measured at a rate of 10 kHz and a resolution of 14 bits (i.e., about 0.6 mV).
+The analog outputs are used in this experiment control of other devices.
