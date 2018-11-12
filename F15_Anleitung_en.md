@@ -1,9 +1,6 @@
 # F15 - Manual: Input measuring and process control
 ##### Sven Brieden 22.10.2018
 
-__!! Include the tasks from the experimental procedure (Read more in previous manual) !!__???
-The intention is that the previous manual can work as an experiment guide manual without any changes. This is an additional document for preparation.
-
 ## Introduction
 In the course of the experiment, you will experience some processes for taking measurements, as well as learning about and developing strategies to control external parameters.
 
@@ -13,6 +10,8 @@ The aim of today's experiment will be to show you such processes using various e
 
 ## Contents
 - Introduction
+- Classification of the experiment
+- Measured value acquisition
 - Programming
   - Data types
   - Control structures
@@ -24,6 +23,18 @@ The aim of today's experiment will be to show you such processes using various e
   - Proportional control
   - Integral control
 - Multi function I/O device
+
+
+## Classification of the experiment
+In order to get to know the work in the laboratory, all measuring instruments were generally controlled manually in the Grundpraktikum. Also all measurement results were recorded manually. As a result of this greatly reduced complexity of the experiments, the focus can be directed to fundamentals: evaluation of the measurement data, as well as their critical classification and the error analysis. The practice in the Fortgeschrittenenpraktikum consists of partial automation and detailed parameter scans. It is usually assumed that the measured value acquisition and process control functions without problems. We try to open this "black box" in this attempt.
+
+## Measured value acquisition
+The individual processing steps of the measured value acquisition are:
+ 1. physical process to be analyzed
+ 2. Sensor registers a physical quantity and often provides a voltage signal. This signal is in the simplest case analog (on / off), for example, from a photoelectric sensor. Many temperature sensors and pressure sensors have a linear relationship between the measurand and the output signal. Both the type of output signal and the relationship associated with the measured variable are variably adjusted to the current problem.
+ 3. Signal processing, improves the signal by recordable noise removal. It is optimized for the following step of analog-to-digital conversion.
+ 4. Analog-to-digital converter converts the processed output signal of the sensor into a signal that is understandable for the PC and the standard processing paths.
+ 5. Digital processing is usually the last step in collecting, displaying and evaluating the signal. The signals can be traced back to the measured variables and compared by means of measured value evaluation.
 
 ## Programming
 ### Data types

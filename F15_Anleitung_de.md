@@ -1,19 +1,17 @@
 # F15 - Anleitung: Messwerterfassung und Prozesssteuerung
 ##### Sven Brieden 22.10.2018
 
-__!! Einbauen der Aufgaben während der Versuchsdurchführung (Orientierung an alter Anleitung) !!__???
-Ich meine die alte Anleitung kann als Platzanleitung fast unverändert weiter genutzt werden. Zusätzlich gibt es dann noch dieses Dokument zur Vorbereitung. 
-
 ## Vorwort zum Versuch
-"
 Im Verlauf des Versuchs werden Sie einige Prozesse zur Aufnahme von Messgrößen erleben sowie Strategien kennenlernen und selbst entwickeln, um externe Parameter zu kontrollieren.
 
 Solche Prozesse sind oft mit vielen einzelnen Schritten verbunden (Kalibrierungen, Referenzierungen,etc.) die erst sauber durchgeführt werden müssen, bevor zuverlässige Ergebnisse generiert werden können.
 
-Ziel des heutigen Versuchs wird es sein, Ihnen solche Prozesse an diversen Beispielen aufzuzeigen und Schritt für Schritt aus unbekannten Signalen belastbare Daten zu generieren. Der Ablauf und die Sequenz der einzelnen Versuchsteile orientieren sich an dem, was bei der Vorbereitung eines komplexen Forschungsexperiments real auftritt." Originalanleitung
+Ziel des heutigen Versuchs wird es sein, Ihnen solche Prozesse an diversen Beispielen aufzuzeigen und Schritt für Schritt aus unbekannten Signalen belastbare Daten zu generieren. Der Ablauf und die Sequenz der einzelnen Versuchsteile orientieren sich an dem, was bei der Vorbereitung eines komplexen Forschungsexperiments real auftritt.
 
 ## Inhaltsverzeichnis
 - Vorwort zum Versuch
+- Einordnung des Versuchs
+- Messwerterfassung
 - Programmierung
   - Datentypen
   - Kontrollstrukturen
@@ -25,6 +23,18 @@ Ziel des heutigen Versuchs wird es sein, Ihnen solche Prozesse an diversen Beisp
   - Proportionalregelung
   - Integralregelung
 - Multifunktions-I/O-Gerät
+
+## Einordnung des Versuchs
+Zum Kennenlernen der Arbeit im Labor wurden im Grundpraktikum generell alle Messgeräte manuelle angesteuert und alle Messergebnisse manuelle aufgenommen. Dadurch diese stark verringerte Komplexität der Versuche kann der Fokus auf Grundlagen gelenkt: Auswertung der Messdaten, sowie deren kritische Einordnung und die Fehleranalyse. Die Praxis im Fortgeschrittenenpraktikum besteht aus Teilautomatisierung und detaillierten Parameter-Scans. Dabei wird meistens vorrausgesetzt, dass die  Messwerterfassung und Prozesssteuerung ohne Probleme funktioniert. Diese „Black Box“ versuchen wir in diesem Versuch zu öffnen. 
+
+## Messwerterfassung
+Die einzelnen Verarbeitungsschritte der Messwerterfassung sind:
+ 1. physikalischer Prozess, der analysiert werden soll
+ 2. Sensor registriert eine physikalischen Größe und liefert häufig ein Spannungssignal. Dieses Signal ist im einfachsten Fall analog(an/aus) beispielsweise von einer Lichtschranke. Viele Temperatursensoren und Drucksensoren haben ein linearen Zusammenhang zwischen der Messgröße und dem Ausgangssignal. Sowohl die Art des Ausgangssignals als auch die mit der Messgröße verbundene Zusammenhang wird varriabel auf das aktuelle Probelm angepasst. 
+ 3. Signalaufbereitung, verbessert das Signal durch bespielsweise Rauschentfernung. Es wird für den folgenden Schritt der Analog-Digital Wandlung optimiert.
+ 4. Analog-Digital Wandler macht aus dem aufbereiteten Ausgangssignal des Sensors ein für den PC und die standard Verarbeitungswege verständliches Signal.
+ 5. Digitale Verarbeitung ist meistens der letzte Schritt, bei dem das Signal gesammelt, dargestellt und ausgewertet wird. Dabei können die Signale auf die Messgrößen zurückgeführt werden und mittels Messwertauswertung verglichen werden.  
+ 
 
 ## Programmierung
 ### Datentypen
@@ -219,6 +229,7 @@ Am Ende wird - wie bei dem P-Anteil - der integrale Wert mit einer Konstanten mu
 # Multifunktions-I/O-Gerät alias DaQ-Pad
 Zur Datenerfassung und Generierung von Steuersignalen wird ein Data Acqusition Modul benutzt. Es ist per USB an den PC angeschlossene und wird mit LabVIEW programmiert. Es stellt eine direkte Schnittstelle zum Messen und Stellen von Analog‑ und Digitalsignal am PC dar. Es erlaubt Livemessung von nahezu beliebiger Messsignale. Dabei werden analoge Spannungssignale als Eingang von ± 10 V erwartet. Dieses Signal kann in einer Rate von 10 kHz und einer Auflösung von 14 Bit (d.h. ca. 0,6 mV) gemessen werden.
 Die Analoge Ausgänge werden in diesem Versuch Ansteuerung weiterer Geräte genutzt. 
+
 
 
 
