@@ -138,7 +138,7 @@ Für diesen Versuch ist es ausreichend die Zählschleife und die kopfgesteuerte 
     rateversuch = random_zahl();
     anzahl = anzahl + 1;
   }
-  printf( "Die Zufallszahl lautet: %d und wurde nach %d Versuchen gefunden", rateversuch, anzahl);
+  printf("Nach %d Versuchen wurde %d gefunden", anzahl, rateversuch);
   ```
 In diesem Beispiel wird nach der Deklaration eine Zufallszahl zufällig ausgewählt. "!=" ist der Ungleich Operator und gibt "wahre Aussage" zurück, wenn zufallszahl und rateversuch ungleich sind. Dadurch wird die Schleife so lange wiederholt, bis rateversuch gleich zufallszahl ist. Bei jedem Durchlauf wird weiterhin die Zählvariabel "anzahl" um eins erhöht. Die Bildschirausgabe erscheint erst, wenn die Schleifenbedingung nicht erfüllt wurde.
 
@@ -191,7 +191,8 @@ Eingabe Rauten-Breite: 5
 LabVIEW ist ein grafisches Programmiersystem von National Instruments.
 Durch die Hauptanwendungsgebiete der Mess-, Regel- und Automatisierungstechnik wird dieses Werkzeug in der Industrie und in der Wissenschaft genutzt. Die Programmierung erfolgt mit einer grafischen Programmiersprache, nach dem Datenfluss-Modell.
 
-Für einen kurzen Überblick können Sie folgendes Video gucken:
+Für einen kurzen Überblick können Sie folgendes Video gucken. Es ist ein Tutorial zur Einführung der Grundfunktionen:
+
 https://www.youtube.com/watch?v=1umq5KqQWMo
 
 # Widerstandsthermometer
@@ -229,7 +230,6 @@ Am Ende wird - wie bei dem P-Anteil - der integrale Wert mit einer Konstanten mu
 # Multifunktions-I/O-Gerät alias DaQ-Pad
 Zur Datenerfassung und Generierung von Steuersignalen wird ein Data Acqusition Modul benutzt. Es ist per USB an den PC angeschlossene und wird mit LabVIEW programmiert. Es stellt eine direkte Schnittstelle zum Messen und Stellen von Analog‑ und Digitalsignal am PC dar. Es erlaubt Livemessung von nahezu beliebiger Messsignale. Dabei werden analoge Spannungssignale als Eingang von ± 10 V erwartet. Dieses Signal kann in einer Rate von 10 kHz und einer Auflösung von 14 Bit (d.h. ca. 0,6 mV) gemessen werden.
 Die Analoge Ausgänge werden in diesem Versuch Ansteuerung weiterer Geräte genutzt. 
-
 
 
 
